@@ -1,0 +1,37 @@
+<h1>Vehicles</h1>
+
+<table class="vehicle-table">
+  <thead>
+    <tr>
+        <th>Year</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Color</th>
+        <th>License Plate Number</th>
+        <th>Lockbox Code</th>
+        <th>Lockbox Location</th>
+        <th>Takes Private Rentals</th>
+        <th>Active on Turo</th>
+        <th>Active on Getaround</th>
+    </tr>
+  </thead>
+
+  <tbody>  
+    <% @vehicles.each do |vehicle|  %>
+      <tr>
+        <td><%= vehicle.year %></td>
+        <td><%= vehicle.make %></td>
+        <td><%= vehicle.model %></td>
+        <td><%= vehicle.color %></td>  
+        <td><%= vehicle.license_plate %></td>
+        <td><%= vehicle.lockbox_code %></td>
+        <td><%= vehicle.lockbox_location %></td>
+        <td><%= check_box_tag '', '', vehicle.takes_private_rentals, {'disabled': true}  %></td>
+        <td><%= check_box_tag '', '', vehicle.active_on_turo, {'disabled': true}  %></td>
+        <td><%= check_box_tag '', '', vehicle.active_on_getaround, {'disabled': true}  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+
+</table>

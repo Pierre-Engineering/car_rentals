@@ -1,0 +1,21 @@
+.vehicle-table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+
+  tbody tr:last-of-type {
+    border-bottom: 1px solid black;
+  }
+
+  td {
+    border-top: 1px solid black;
+
+    &:first-child {
+      border-left: 1px solid black;
+    }
+
+    &:nth-child(even) {
+      border-left: 1px solid black;
+      border-right: 1px solid black;      
+    }
+  }
+}
